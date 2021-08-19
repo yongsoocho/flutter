@@ -226,7 +226,16 @@ class MyBody extends StatelessWidget {
             style: TextButton.styleFrom(
               backgroundColor: Colors.indigo,
             ),
-          )
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (BuildContext context) {
+                return SecondPage();
+              }));
+            },
+            child: Text('Route~'),
+          ),
         ],
       ),
     );
@@ -242,4 +251,24 @@ void fluttertoast() {
     textColor: Colors.white54,
     toastLength: Toast.LENGTH_SHORT,
   );
+}
+
+class SecondPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Hi~'),
+      ),
+      body: Column(children: <Widget>[
+        Text('Is this work?'),
+        ElevatedButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: Text('Back'),
+        )
+      ]),
+    );
+  }
 }
