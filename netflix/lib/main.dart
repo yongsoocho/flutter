@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:netflix/screen/home_screen.dart';
 import 'package:netflix/widget/bottom_bar.dart';
 
 void main() => runApp(MyApp());
@@ -26,9 +27,7 @@ class _MyAppState extends State<MyApp> {
               physics: NeverScrollableScrollPhysics(),
               children: <Widget>[
                 Container(
-                  child: Center(
-                    child: Text('home'),
-                  ),
+                  child: HomeScreen(),
                 ),
                 Container(
                   child: Center(
