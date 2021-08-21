@@ -38,7 +38,7 @@ class _CarouselImageState extends State<CarouselImage> {
           CarouselSlider(
             items: images,
             options: CarouselOptions(
-              height: 360.0,
+              height: 200.0,
               onPageChanged: (index, reason) {
                 setState(() {
                   _currentPage = index;
